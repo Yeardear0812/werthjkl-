@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Meetings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Online Meetings</h1>
+        
+        <div class="join-meeting">
+            <input type="text" id="meetingId" placeholder="Enter meeting ID">
+            <button onclick="joinMeeting()">Join Meeting</button>
+            <button onclick="createMeeting()">Create New Meeting</button>
+        </div>
+
+        <div class="meeting-room" style="display: none;">
+            <div class="video-container">
+                <video id="localVideo" autoplay playsinline class="local-video"></video>
+                <div id="remoteVideos"></div>
+            </div>
+            <div class="meeting-info">
+                <p>Meeting ID: <span id="currentMeetingId"></span></p>
+                <button onclick="copyMeetingId()">Copy Meeting ID</button>
+            </div>
+            <div class="controls">
+                <button onclick="toggleMic()">Mute/Unmute</button>
+                <button onclick="toggleVideo()">Video On/Off</button>
+                <button onclick="leaveMeeting()">Leave Meeting</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
